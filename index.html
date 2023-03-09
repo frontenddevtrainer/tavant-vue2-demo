@@ -13,18 +13,21 @@
 
 <body>
     <div id="application">
-        {{message}}
-        <ul>
-            <li v-for="person in people">
-                <h1>{{person.name}}<span v-if="person.isAdmin">💂‍♀️</span></h1>
-                <h2>{{person.age}}</h2>
-            </li>
-        </ul>
+        <application-component></application-component>
     </div>
 
 
-
-    <script src="script.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/main.js"></script>
+    <script src="application.js"></script>
 </body>
 
 </html>
+
+<!-- {{message}}
+<ul>
+    <li v-for="person in people">
+        <h1>{{person.name}}<span v-if="person.isAdmin">💂‍♀️</span></h1>
+        <h2>{{person.age}}</h2>
+    </li>
+</ul> -->
