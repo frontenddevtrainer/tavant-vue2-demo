@@ -3,6 +3,7 @@ Vue.component("counter-component", {
         <button v-on:click="decrement()">-</button>
         {{counter}}
         <button v-on:click="increment()">+</button>
+        <input v-model="text" type="text" v-on:keyup.delete="deleteText()"/>
     </div>`,
     methods: {
         increment: function () {
@@ -11,10 +12,14 @@ Vue.component("counter-component", {
         decrement: function () {
             this.counter = this.counter - 1
         },
+        deleteText: function(){
+            this.text = "";
+        }
     },
     data: function () {
         return {
-            counter: 0
+            counter: 0,
+            text: "hello"
         }
     }
 })
